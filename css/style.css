@@ -1,0 +1,116 @@
+*{
+	padding: 0;
+	margin: 0;
+    text-decoration: none;
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: white;
+	height: 39px;
+	width: 100%;
+	position: fixed;
+	z-index: 3
+}
+
+a {
+	font-family: 'papercraft';
+	font-style: italic;
+	text-decoration: none;
+	position: relative;
+	padding: 6px;
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 25px;
+	color:#6e6e6e;
+}
+
+.contenu {
+	position: absolute;
+	top: 20px;
+	left: 35px;
+	height: 100%;
+	color:#6e6e6e;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.video-fond { 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	overflow: hidden;
+}
+	
+h1 {
+    text-align:left;
+	position: absolute;
+    color:#7e7e7e;
+	font-size:1em;
+	font-weight:100;
+	font-family: 'papercraft';
+    z-index:2;	
+	top: 55px;
+	left: 18px;
+}
+	
+.slider { 
+    position: center; 
+	overflow: hidden; 
+	width: 1000px; /* Ajuste la largeur selon tes besoins */ 
+	height: auto; /* Ajuste la hauteur selon tes besoins */ 
+	margin: 0 auto;
+	object-fit: cover;
+	animation: slide 10s linear infinite;
+	max-width: 100%;
+
+} 
+
+.slides { 
+    display: flex; 
+	transition: transform 0.5s ease; /* Transition fluide */ 
+} 
+
+.slide { 
+    width: 100%; /* Chaque image prend toute la largeur du slider */ 
+	object-fit: cover;
+}
+
+@media (max-width: 768px){
+	.slider {
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 96%;
+		margin-top: 2px;
+		order: 2;
+	}
+}
+
+@media (max-width: 768px){
+	a {
+		flex-direction: column;
+		align-items: flex-start;
+		font-size: 25px;
+		margin: auto;
+		margin-right: 10px;
+	}
+}
+
+.video-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+}
